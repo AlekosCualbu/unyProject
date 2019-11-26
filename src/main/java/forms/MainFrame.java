@@ -17,6 +17,8 @@ public class MainFrame extends javax.swing.JFrame {
     LibreriaLibri libreria = new LibreriaLibri();
     public MainFrame() {
         initComponents();
+        this.setResizable(false);
+        this.mainTxtArea.setEditable(false);
     }
 
 
@@ -231,12 +233,15 @@ public class MainFrame extends javax.swing.JFrame {
             libreria.inserisci(libreria.getMap(),
                     new Libri(Long.parseLong(isbnField.getText()),
                             autoreField.getText(), Integer.parseInt(prezzoField.getText()),
-                            genereCB.getSelectedItem().toString(), titoloField.getText(),
+                            titoloField.getText(), genereCB.getSelectedItem().toString(),
                             controllo()), isbnField);
         }catch (NumberFormatException ex) {
             System.out.println(ex);
             /*popup*/
-            JOptionPane.showMessageDialog(this,"il campo non va bene");
+            JOptionPane.showMessageDialog(this,"Price and isbn must be a number");
+        }catch (NullPointerException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this,"Not correct or empty field!");
         }
 
     }
@@ -253,6 +258,9 @@ public class MainFrame extends javax.swing.JFrame {
         }catch (NumberFormatException ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this,"l'isbn deve essere un numero");
+        }catch (NullPointerException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this,"this id doesn't exist");
         }
 
     }
@@ -270,22 +278,34 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void cercabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cercabtnActionPerformed
         // TODO add your handling code here:
-        libreria.cerca(libreria.getMap(), mainTxtArea, Long.parseLong(idField.getText()));
+        try {
+            libreria.cerca(libreria.getMap(), mainTxtArea, Long.parseLong(idField.getText()));
+        }catch (Exception ex) {
+            if(!ex.getClass().getName().equals(NumberFormatException.class.getName()))
+                JOptionPane.showMessageDialog(this, "the id doesn't exist");
+            else
+                JOptionPane.showMessageDialog(this, "the ID is a number");
+
+        }
     }//GEN-LAST:event_cercabtnActionPerformed
     public String controllo(){
         String tmp="";
         Enumeration<AbstractButton>elements = btnGroup.getElements();
         while(elements.hasMoreElements()){
             JRadioButton btn = (JRadioButton) elements.nextElement();
-            if(btn.isSelected()){
+            if(btn.isSelected())
                 tmp = btn.getText();
-                System.out.println("tmp " + btn.getText());
-            }
         }
+        if(tmp.equals(""))
+            JOptionPane.showMessageDialog(this, "the availability is not selected");
+
         return tmp;
     }
 
     public void cancella(){
+        if(mainTxtArea.getText().equals(""))
+            JOptionPane.showMessageDialog(this, "it is already empty");
+        else
         mainTxtArea.setText("");
     }
 

@@ -20,10 +20,28 @@ public class Libri {
 
     public Libri(){/*default constructor*/}
 
+
+    public boolean isEmpty(String value){
+        return value.equals("");
+    }
+
     @Override
     public String toString(){
         return autore + " " + title + " "
                 + gender + " " + price + " "
                 + " " + isbn + "\t" + isAvailable;
     }
+
+    public String getAutore() {
+        return autore;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+
+
+
 }

@@ -1,5 +1,6 @@
 package usage;
 
+import forms.MainFrame;
 import utilities.Librerie;
 
 import javax.swing.*;
@@ -7,13 +8,21 @@ import java.util.Map;
 
 public class LibreriaLibri extends Librerie {
     @Override
-    public void inserisci(Map<Long, Libri> map, Libri libro, JTextField isbn) throws NumberFormatException {
-        map.put(Long.parseLong(isbn.getText()),libro);
+    public void inserisci(Map<Long, Libri> map, Libri libro, JTextField isbn) throws NumberFormatException,NullPointerException {
+        String regex = "\\d";
+        if(!libro.getAutore().matches(regex) && !libro.getTitle().matches(regex)
+                && !libro.isEmpty(libro.getAutore()) && !libro.isEmpty(libro.getTitle()))
+            map.put(Long.parseLong(isbn.getText()),libro);
+        else
+            throw new NullPointerException();
     }
 
     @Override
-    public void rimuovi(Map<Long, Libri> map, Long id) throws NumberFormatException{
-        map.remove(id);
+    public void rimuovi(Map<Long, Libri> map, Long id) throws NumberFormatException,NullPointerException{
+        if(!map.isEmpty() && map.containsKey(id) && id > 0)
+            map.remove(id);
+        else
+            throw new NullPointerException();
     }
 
     @Override
@@ -29,8 +38,12 @@ public class LibreriaLibri extends Librerie {
     }
 
     @Override
-    public void cerca(Map<Long, Libri> map, JTextArea txt_area, Long id) {
+    public void cerca(Map<Long, Libri> map, JTextArea txt_area, Long id) throws Exception {
         txt_area.setText("");
-        txt_area.append("" + map.get(id));
+        if(map.containsKey(id) && id > 0)
+             txt_area.append("" + map.get(id));
+        else
+            throw new Exception();
+
     }
 }
