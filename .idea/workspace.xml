@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4d4564-54ff-46a6-a2cd-de839572de19" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/forms/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/usage/LibreriaLibri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usage/LibreriaLibri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Librerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Librerie.java" afterDir="false" />
-    </list>
+    <list default="true" id="3c4d4564-54ff-46a6-a2cd-de839572de19" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
       <updated>1574690142163</updated>
       <workItem from="1574690144769" duration="3952000" />
       <workItem from="1574761170382" duration="10000" />
-      <workItem from="1574776097487" duration="5984000" />
+      <workItem from="1574776097487" duration="6193000" />
     </task>
     <servers />
   </component>
