@@ -1,5 +1,6 @@
 package usage;
 
+import forms.MainFrame;
 import utilities.Librerie;
 
 import javax.swing.*;
@@ -29,8 +30,12 @@ public class LibreriaLibri extends Librerie {
     }
 
     @Override
-    public void cerca(Map<Long, Libri> map, JTextArea txt_area, Long id) {
+    public void cerca(Map<Long, Libri> map, JTextArea txt_area, Long id) throws Exception {
         txt_area.setText("");
-        txt_area.append("" + map.get(id));
+        if(map.containsKey(id) && id > 0)
+             txt_area.append("" + map.get(id));
+        else
+            throw new Exception();
+
     }
 }

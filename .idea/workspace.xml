@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c4d4564-54ff-46a6-a2cd-de839572de19" name="Default Changelist" comment="">
+    <list default="true" id="3e3f87d8-01ba-4829-abed-05840679c7d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/forms/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/forms/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/usage/LibreriaLibri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usage/LibreriaLibri.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Librerie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Librerie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/forms/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/forms/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/usage/LibreriaLibri.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usage/LibreriaLibri.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/usage/Libri.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usage/Libri.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Librerie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/Librerie.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,20 +29,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1U6w29jf8XUzaitDxhsGev5elZl" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UANT7jx9JRkSg7WmBMd0Mfo385" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -47,7 +64,7 @@
   <component name="RunManager">
     <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="forms.MainFrame" />
-      <module name="unyss" />
+      <module name="project-uny" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="forms.*" />
@@ -69,14 +86,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3c4d4564-54ff-46a6-a2cd-de839572de19" name="Default Changelist" comment="" />
-      <created>1574690142163</created>
+      <changelist id="3e3f87d8-01ba-4829-abed-05840679c7d9" name="Default Changelist" comment="" />
+      <created>1574795444291</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574690142163</updated>
-      <workItem from="1574690144769" duration="3952000" />
-      <workItem from="1574761170382" duration="10000" />
-      <workItem from="1574776097487" duration="5984000" />
+      <updated>1574795444291</updated>
+      <workItem from="1574795448472" duration="2480000" />
     </task>
     <servers />
   </component>
@@ -88,9 +103,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
