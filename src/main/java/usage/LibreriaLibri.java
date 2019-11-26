@@ -7,27 +7,13 @@ import java.util.Map;
 
 public class LibreriaLibri extends Librerie {
     @Override
-    public void inserisci(Map<Long, Libri> map, Libri libro, JTextField isbn) {
-        try {
-               map.put(Long.parseLong(isbn.getText()),libro);
-        }catch (NumberFormatException ex) {
-            /*questo print viene eseguito
-            * solamente se viene lanciata l'eccezzione*/
-            System.out.println(ex);
-            /*create the popup*/
-        }
+    public void inserisci(Map<Long, Libri> map, Libri libro, JTextField isbn) throws NumberFormatException {
+        map.put(Long.parseLong(isbn.getText()),libro);
     }
 
     @Override
-    public void rimuovi(Map<Long, Libri> map, Long id) {
-        try {
-                map.remove(id);
-        }catch (NumberFormatException ex) {
-            /*questo print viene eseguito
-             * solamente se viene lanciata l'eccezzione*/
-            System.out.println(ex);
-            /*create the popup*/
-        }
+    public void rimuovi(Map<Long, Libri> map, Long id) throws NumberFormatException{
+        map.remove(id);
     }
 
     @Override

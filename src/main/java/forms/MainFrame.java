@@ -1,14 +1,7 @@
 package forms;
 
 import java.util.Enumeration;
-import javax.swing.AbstractButton;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+import javax.swing.*;
 import usage.LibreriaLibri;
 import usage.Libri;
 
@@ -36,11 +29,13 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+
         btnGroup = new javax.swing.ButtonGroup();
         inseriscibtn = new javax.swing.JButton();
         rimuovibtn = new javax.swing.JButton();
         visualizzatuttibtn = new javax.swing.JButton();
         cancellabtn = new javax.swing.JButton();
+        abilitaRicerca = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         mainTxtArea = new javax.swing.JTextArea();
         isbnField = new javax.swing.JTextField();
@@ -53,7 +48,18 @@ public class MainFrame extends javax.swing.JFrame {
         cercabtn = new javax.swing.JButton();
         idField = new javax.swing.JTextField();
 
+        btnGroup.add(eDispRadio);
+        btnGroup.add(notDispRadio);
+
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        abilitaRicerca.setText("Abilita");
+         abilitaRicerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abilitaRicercaActionPerformed(evt);
+            }
+        });
 
         inseriscibtn.setText("Inserisci");
         inseriscibtn.addActionListener(new java.awt.event.ActionListener() {
@@ -76,8 +82,12 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        cancellabtn.setText("Cancella Area");
-
+        cancellabtn.setText("Cancella");
+        cancellabtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancellabtnActionPerformed(evt);
+            }
+        });
         mainTxtArea.setColumns(20);
         mainTxtArea.setRows(5);
         jScrollPane1.setViewportView(mainTxtArea);
@@ -138,8 +148,18 @@ public class MainFrame extends javax.swing.JFrame {
                                                         .addGroup(layout.createSequentialGroup()
                                                                 .addComponent(inseriscibtn, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
+                                                                /**/
+
+//                                                                .addGroup(layout.createSequentialGroup()
+//                                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+//                                                                                .addGroup(layout.createSequentialGroup()
+//                                                                                        .addComponent(abilitaRicerca, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                                                                                        .addGap(18, 18, 18)
+
+                                                                /**/
                                                                 .addComponent(rimuovibtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(cercabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(cercabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(abilitaRicerca, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(39, 39, 39)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,8 +170,7 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addGap(28, 28, 28))
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(66, 66, 66)
-                                .addComponent(genereCB, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(genereCB, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,7 +197,9 @@ public class MainFrame extends javax.swing.JFrame {
                                                         .addComponent(inseriscibtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(rimuovibtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(visualizzatuttibtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(cancellabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(cancellabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                                                        .addComponent(abilitaRicerca, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                )
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(eDispRadio)
@@ -191,6 +212,8 @@ public class MainFrame extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(cercabtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(abilitaRicerca, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                                                         .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addContainerGap(35, Short.MAX_VALUE))
         );
@@ -204,12 +227,18 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_isbnFieldActionPerformed
 
     private void inseriscibtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inseriscibtnActionPerformed
-        // TODO add your handling code here:
-        libreria.inserisci(libreria.getMap(),
-                new Libri(Long.parseLong(isbnField.getText()),
-                        autoreField.getText(),Integer.parseInt(prezzoField.getText()),
-                        genereCB.getSelectedItem().toString(),titoloField.getText(),
-                         controllo2()),isbnField);
+        try {
+            libreria.inserisci(libreria.getMap(),
+                    new Libri(Long.parseLong(isbnField.getText()),
+                            autoreField.getText(), Integer.parseInt(prezzoField.getText()),
+                            genereCB.getSelectedItem().toString(), titoloField.getText(),
+                            controllo()), isbnField);
+        }catch (NumberFormatException ex) {
+            System.out.println(ex);
+            /*popup*/
+            JOptionPane.showMessageDialog(this,"il campo non va bene");
+        }
+
     }
 
     private void visualizzatuttibtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visualizzatuttibtnActionPerformed
@@ -219,9 +248,25 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void rimuovibtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rimuovibtnActionPerformed
-        // TODO add your handling code here:
-        libreria.rimuovi(libreria.getMap(), Long.parseLong(isbnField.getText()));
+        try {
+            libreria.rimuovi(libreria.getMap(), Long.parseLong(isbnField.getText()));
+        }catch (NumberFormatException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this,"l'isbn deve essere un numero");
+        }
+
     }
+
+    private void cancellabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rimuovibtnActionPerformed
+        cancella();
+    }
+
+    private void abilitaRicercaActionPerformed(java.awt.event.ActionEvent event) {
+        abilitaRicerca.setVisible(false);
+        cercabtn.setVisible(true);
+        idField.setVisible(true);
+    }
+
 
     private void cercabtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cercabtnActionPerformed
         // TODO add your handling code here:
@@ -240,12 +285,18 @@ public class MainFrame extends javax.swing.JFrame {
         return tmp;
     }
 
+    public void cancella(){
+        mainTxtArea.setText("");
+    }
+
     public String controllo2(){
+        String tmp = "";
         if(eDispRadio.isSelected()) {
-            return eDispRadio.getText().toString();
-        }else {
-            return notDispRadio.getText().toString();
+            tmp =  eDispRadio.getText().toString();
+        }else if(notDispRadio.isSelected()){
+           tmp =  notDispRadio.getText().toString();
         }
+        return tmp;
     }
 
     /**
@@ -278,7 +329,10 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+                MainFrame main = new MainFrame();
+                main.setVisible(true);
+                main.cercabtn.setVisible(false);
+                main.idField.setVisible(false);
             }
         });
     }
@@ -300,6 +354,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton rimuovibtn;
     private javax.swing.JTextField titoloField;
     private javax.swing.JButton visualizzatuttibtn;
+    private javax.swing.JButton abilitaRicerca;
     // End of variables declaration//GEN-END:variables
 
     public LibreriaLibri getLibreria() {
